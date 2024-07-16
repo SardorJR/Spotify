@@ -1,0 +1,437 @@
+.wrap2 {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    padding-inline: 20px;
+    gap: 2%;
+    margin-top: 26px;
+}
+
+.artists_box3 {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 49%;
+    gap: 10px;
+
+    .top {
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+
+        p {
+            font-size: 22px;
+            font-weight: 700;
+            color: white;
+        }
+    }
+}
+
+.album_box2 {
+    display: flex;
+    display: none;
+    flex-direction: column;
+    align-items: start;
+    width: 49%;
+    gap: 10px;
+
+    .top {
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+
+        p {
+            font-size: 22px;
+            font-weight: 700;
+            color: white;
+        }
+    }
+
+    .album_box_container2_glav {
+
+        width: 100%;
+
+    }
+
+    .album_box_container2 {
+
+        width: 100%;
+        border-radius: 5px;
+        height: 240px;
+        background-color: #181818;
+        display: flex;
+        justify-content: start;
+        align-items: start;
+
+        &:hover {
+            background-color: #3533337e;
+        }
+
+        .wrappers {
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+
+            .img2 {
+                width: 100%;
+                height: 100%;
+
+                img {
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%;
+                }
+            }
+
+            .name {
+                padding-block: 5px 0;
+
+                a {
+                    color: white;
+                    font-size: 30px;
+                    font-weight: 700;
+                }
+
+                p {
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: rgb(221, 214, 214);
+                }
+            }
+        }
+    }
+}
+
+.artists_box3 {
+    display: none;
+    width: 49%;
+
+    flex-direction: column;
+
+
+}
+
+.album_box {
+    display: none;
+    flex-direction: column;
+    padding-inline: 20px;
+    margin-top: 26px;
+    align-items: center;
+    width: 100%;
+
+    .top {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-block: 0 15px;
+
+        p {
+            font-size: 22px;
+            font-weight: 700;
+            color: white;
+        }
+
+        span {
+            font-size: 13px;
+            color: #ffffff8a;
+            font-weight: 600;
+        }
+    }
+
+    .album_box_container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        scrollbar-width: none;
+        width: calc(100% + 20px);
+
+        .album {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            border-radius: 6px;
+            position: relative;
+            min-width: 170px;
+
+            button {
+                position: absolute;
+                top: 110px;
+                right: 15px;
+                opacity: 0;
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                border: 0;
+                background-color: #65D36E;
+                transition: opacity 0.3s ease;
+
+                img {
+                    width: 40%;
+                    margin-right: -5px;
+                    margin-top: 3px;
+                }
+
+                &:hover {
+                    scale: 1.1;
+                }
+            }
+
+            &:hover {
+                background-color: #222222;
+            }
+
+            &:hover button {
+
+                opacity: 1;
+            }
+
+            .img {
+                width: 100%;
+                height: 130px;
+                border-radius: 6px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .data {
+                display: flex;
+                flex-direction: column;
+                padding-block: 5px 0;
+
+                .name {
+                    color: white;
+                    font-size: 15px;
+                    font-weight: 500;
+                }
+
+                .title {
+                    color: #b4b4b4;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+
+.musics-container {
+    display: flex;
+    flex-direction: column;
+
+    padding: 8px 5px;
+    width: 100%;
+
+    .item_musics_box {
+        width: calc(100% + 20px);
+        padding: 10px 3px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &:hover {
+            background-color: rgba(145, 141, 141, 0.247);
+            border-radius: 5px;
+        }
+
+        .left {
+            width: 40%;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 15px;
+
+            p {
+                font-size: 15px;
+                color: rgb(216, 213, 213);
+                font-weight: 500;
+                display: none;
+            }
+
+            img {
+                width: 40px;
+                border-radius: 5px;
+            }
+
+            a {
+                font-size: 15px;
+                color: white;
+                font-weight: 500;
+                text-decoration: none;
+
+            }
+        }
+
+        h4 {
+            font-size: 15px;
+            color: rgb(207, 203, 203);
+            font-weight: 400;
+            display: none;
+        }
+
+        .pop {
+            display: block;
+        }
+    }
+}
+
+
+@media (max-width:600px) {
+    body {
+        .container {
+            .wrap2 {
+                display: flex;
+                flex-direction: column;
+
+                .album_box2 {
+                    width: 100%;
+
+                    .album_box_container2_glav {
+                        .album_box_container2 {
+                            justify-content: center;
+                            align-items: center;
+                        }
+
+                    }
+                }
+
+                .artists_box3 {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:776px) {
+    body {
+        .container {
+            .cont_box {
+                header {
+                    .right-hand_side {
+                        padding-block: 3px 0 !important;
+
+                        .down {
+                            display: none;
+                        }
+                    }
+
+
+                }
+            }
+        }
+    }
+}
+
+.top {
+    padding-block: 0px 10px;
+}
+
+
+@media (max-width:600px) {
+body{
+    .container{
+        .cont_box{
+            header{
+                .left-hand_side {
+
+                    input {
+                        padding: 0 10px 0 30px !important;
+                        width: 120px;
+                        height: 35px !important;
+                        background-size: 15px !important;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+}
+
+@media (max-width:405px) {
+    body {
+        .container {
+            .cont_box {
+                header {
+                    .right-hand_side {
+                        padding-block: 3px 0 !important;
+
+                        .down {
+                            display: none;
+                        }
+
+                        .bell {
+                            display: none;
+                        }
+                    }
+
+                    .left-hand_side {
+
+                        input {
+                            margin-inline: 0 !important;
+                            padding: 0 10px 0 30px !important;
+                            width: 100px;
+                            height: 35px !important;
+                            background-size: 15px !important;
+                        }
+                    }
+                }
+            }
+
+            .wrap2 {
+                .album_box2 {
+                    .top {
+                        p {
+                            font-size: 18px;
+                        }
+                    }
+                }
+
+                .artists_box3 {
+                    .top {
+                        p {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:345px) {
+    body {
+        .container {
+            .cont_box {
+                header {
+                    .right-hand_side {
+                        padding-block: 3px 0 !important;
+
+                        .down {
+                            display: none;
+                        }
+
+                        .bell {
+                            display: none;
+                        }
+
+                        .profile {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

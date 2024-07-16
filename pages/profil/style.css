@@ -1,0 +1,108 @@
+.profil_box {
+    width: 100%;
+    height: 50%;
+    background-color: rgb(66, 65, 65);
+    margin-top: -100px;
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+    align-items: center;
+    padding-block: 60px 0;
+    padding-inline: 30px;
+
+    .elem_profil {
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 190px;
+            height: 190px;
+            border-radius: 100%;
+            background-color: rgb(50, 50, 51);
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+
+                object-fit: cover;
+            }
+        }
+
+        span {
+            color: white;
+            font-weight: 700;
+            font-size: 90px;
+        }
+
+        p {
+            color: white;
+            font-size: 12px;
+            font-weight: 500;
+        }
+    }
+}
+
+
+@media(max-width:732px) {
+    body {
+        .container {
+            .profil_box {
+                .elem_profil {
+                    div {
+                        width: 150px;
+                        height: 150px;
+                    }
+
+                    span {
+                        font-size: 55px;
+                    }
+                }
+
+            }
+            .artists_box{
+                .artists_box_container{
+                    .album{
+                        min-width: 140px;
+                        .img{
+                            width: 120px !important;
+                            height: 120px !important;
+                          img{
+                            width: 100%;
+                          }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width:532px) {
+    body {
+        .container {
+            .profil_box {
+                height: 35%;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+            }
+          
+        }
+    }
+}
+
+@media(max-width:368px) {
+    body {
+        .container {
+            .elem_profil:nth-child(2) {
+
+                span {
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+}

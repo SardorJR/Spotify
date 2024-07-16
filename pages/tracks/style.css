@@ -1,0 +1,237 @@
+.tracks_container {
+    width: 100%;
+    height: 85%;
+    background-color: rgb(42, 139, 224);
+    display: flex;
+    align-items: start;
+    gap: 20px;
+    justify-content: start;
+    padding-block: 80px 0;
+    padding-inline: 20px 0;
+    margin-top: -30px;
+
+    .img_artist {
+
+        img {
+            width: 180px;
+            height: 180px;
+            border-radius: 5px;
+        }
+    }
+
+    .names {
+        display: flex;
+        flex-direction: column;
+        align-items: bottom;
+        padding-block: 40px 0;
+        /*       
+        gap: 15px; */
+    }
+
+    p {
+        color: white;
+        font-weight: 600;
+    }
+
+    h2 {
+        color: white;
+        font-size: 50px;
+        font-weight: 700;
+
+
+    }
+}
+
+.cont_box {
+    height: 65px;
+
+}
+
+header {
+    height: 65px;
+}
+
+.tracks {
+    width: 100%;
+
+    margin-top: -185px;
+    background-color: rgba(0, 0, 0, 0.26);
+
+    .container_albums_musics {
+
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+
+        .albums_musics {
+            padding-inline: 20px;
+            display: flex;
+            height: 50px;
+            align-items: center;
+
+            margin-top: 10px;
+
+            &:hover {
+                background-color: rgba(134, 126, 126, 0.733);
+                border-radius: 3px;
+            }
+
+            a,
+            span,
+            p {
+                color: #b3b3b3;
+                font-weight: 500;
+
+            }
+
+            a {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+
+            .song_number {
+                width: 3.5%;
+            }
+
+            .song_img {
+                width: 40px;
+                height: 100%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .box_song_name {
+                width: 56%;
+                height: 100%;
+                padding-inline: 10px;
+                display: flex;
+                align-items: start;
+                justify-content: center;
+                flex-direction: column;
+
+                .alb {
+                    font-size: 13px;
+                }
+
+            }
+        }
+
+        /* .song_album {
+            width: 30%;
+            height: 100%;
+            padding-right: 20px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        } */
+
+        .song_duration {
+            width: 37%;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+    }
+
+    .players_bt {
+        padding: 20px;
+
+        button {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background-color: #65D36E;
+            border: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 30%;
+            }
+        }
+    }
+}
+
+.container_albums_musics {
+    padding-inline: 20px;
+}
+
+@media (max-width:1100px) {
+    body {
+        .wrap {
+            .container {
+                .tracks_container {
+                    height: 50%;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width:520px) {
+    body {
+        .wrap {
+            .container {
+                .tracks_container {
+                    .img_artist {
+                        img {
+                            width: 110px;
+                            height: 100px;
+                        }
+                    }
+
+                    .names {
+                        padding-block: 0;
+
+                        p {
+                            font-size: 14px;
+                        }
+
+                        h2 {
+                            font-size: 30px;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width:520px) {
+    .wrap {
+        .container {
+            .tracks_container {
+                display: flex;
+                flex-direction: column;
+            }
+            .tracks{
+                .container_albums_musics{
+                    .albums_musics{
+                        padding-inline: 0;
+                        p{
+                            display: none;
+                        }
+                        .box_song_name{
+                            padding-inline: 0;
+                            p{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

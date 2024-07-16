@@ -1,0 +1,393 @@
+.albums {
+    width: 100%;
+    height: 70%;
+    background-color: aqua;
+    margin-top: -100px;
+    padding-top: 90px;
+    padding-inline: 20px;
+    display: flex;
+    align-items: start;
+    gap: 10px;
+
+    .item_albums {
+        border-radius: 50%;
+
+
+        img {
+            width: 170px;
+            height: 160px;
+            border-radius: 5px;
+        }
+    }
+
+    .item_albums_right {
+        display: flex;
+        flex-direction: column;
+        padding-block: 20px 0;
+        gap: 5px;
+
+        p {
+            color: white;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        h2 {
+            color: white;
+            font-weight: 700;
+            font-size: 40px;
+            width: 100%;
+        }
+
+        span {
+            color: gray;
+            font-weight: 500;
+            font-size: 15px;
+        }
+    }
+}
+
+.albums_pl {
+    width: 100%;
+    height: 100%;
+    background-color: #0f0e0e38;
+    margin-top: -125px;
+
+    padding: 20px;
+
+    .players_bt {
+
+
+        button {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background-color: #65D36E;
+            border: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 30%;
+            }
+        }
+    }
+
+    .elem_albums_box {
+        padding-inline: 20px 20px;
+        display: flex;
+        align-items: center;
+        margin-block: 20px 0;
+        padding-block: 10px;
+        border-bottom: 1px solid #b3b3b33d;
+        width: 100%;
+
+        span {
+            color: #b3b3b3;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .num_top {
+            width: 5%;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+
+        .name_top {
+            width: 55%;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+
+        /* .album_top {
+            width: 30%;
+        } */
+
+        .duration_top {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            width: 36%;
+
+            img {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+
+    .container_albums_musics {
+
+        display: flex;
+        flex-direction: column;
+
+        .albums_musics {
+            padding-inline: 20px;
+            display: flex;
+            height: 50px;
+            align-items: center;
+
+            margin-top: 10px;
+
+            &:hover {
+                background-color: rgba(134, 126, 126, 0.733);
+                border-radius: 3px;
+            }
+
+            a,
+            span,
+            p {
+                color: #b3b3b3;
+                font-weight: 500;
+
+            }
+
+            a {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+
+            .song_number {
+                width: 3.5%;
+            }
+
+            .song_img {
+                width: 40px;
+                height: 100%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .box_song_name {
+                width: 56%;
+                height: 100%;
+                padding-inline: 10px;
+                display: flex;
+                align-items: start;
+                justify-content: center;
+                flex-direction: column;
+
+                .alb {
+                    font-size: 13px;
+                }
+
+            }
+        }
+
+        /* .song_album {
+            width: 30%;
+            height: 100%;
+            padding-right: 20px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        } */
+
+        .song_duration {
+            width: 37%;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+    }
+
+}
+
+/* .box_menu{
+  
+    height: 50px;
+background-color: red;
+position: fixed;
+top: 40px;
+} */
+
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.scdn.co/image/ab67616d00001e024d070fdf58fad8c54c5beb85');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .modal_shadow {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.582);
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-between;
+        padding: 50px;
+        gap: 50px;
+
+        .photo_name {
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            gap: 20px;
+            height: calc(100% - 140px);
+
+            .img {
+                width: 100px;
+                height: 100px;
+
+                img {
+                    border-radius: 5px;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .names_tracks {
+                padding-block: 30px 0;
+
+                span {
+                    font-size: 30px;
+                    font-weight: 600;
+                    color: white;
+                }
+
+                p {
+                    font-size: 13px;
+                    font-weight: 500;
+                    color: #b3b3b3;
+                }
+            }
+        }
+
+        .player {
+            height: 50px;
+            padding: 0px;
+
+            .item_controls {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width:1100px) {
+    body {
+        .wrap {
+            .container {
+                .albums {
+                    height: 50%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:700px) {
+    body {
+        .wrap {
+            .container {
+                .albums {
+                    height: 40%;
+                }
+            }
+        }
+    }
+    
+}
+@media (max-width:520px) {
+    body {
+        .wrap {
+            .container {
+                .albums {
+                    .item_albums{
+                        img{
+                            width: 110px;
+                            height: 100px;
+                        }
+                    }
+                    .item_albums_right{
+                        padding-block: 0;
+                        p{
+                            font-size: 14px;
+                        }
+                        h2{
+                            font-size: 30px;
+                        }
+                        span{
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+@media (max-width:398px) {
+    body {
+        .wrap {
+            .container {
+                .albums {
+                    height: 43%;
+                   display: flex;
+                   flex-direction: column;
+                 
+                }
+            }
+        }
+    }
+    
+}
+@media (max-width:400px) {
+    body {
+        .wrap {
+            .container {
+              .albums_pl{
+                .elem_albums_box{
+                    padding-inline: 0;
+                }
+                .container_albums_musics{
+                    padding-inline: 0px;
+                        .albums_musics{
+                            padding-inline: 0px;
+                            .box_song_name{
+                                p{
+                                    display: none;
+                                }
+                            }
+                        }
+                }
+              }
+            }
+        }
+    }
+}
+@media (max-width:360px) {
+    body {
+        .wrap {
+            .container {
+              .albums_pl{
+                .container_albums_musics{
+                        .albums_musics{
+                            width: 100%;
+                          p{
+                            display: none;
+                          }
+                        }
+                }
+              }
+            }
+        }
+    }
+}

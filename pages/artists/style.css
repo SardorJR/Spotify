@@ -1,0 +1,268 @@
+.cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70vh;
+    margin-top: -100px;
+}
+
+header {
+    transition: all 0.3s ease;
+}
+
+
+
+
+.image_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 75%;
+    background-image: url('https://i.scdn.co/image/ab67616100005174437b9e2a82505b3d93ff1022');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 90px;
+
+
+    /* filter: brightness(80%); */
+    .confirmed {
+        margin-inline: 20px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 5px;
+        margin-top: -70px;
+        padding-block: 30px 0;
+
+        img {
+            width: 4%;
+        }
+
+        span {
+            color: white;
+            font-weight: 500;
+            font-size: 13px;
+        }
+
+    }
+
+    h2 {
+        font-size: 65px;
+        color: white;
+        font-weight: 800;
+        margin-inline: 20px;
+    }
+
+    h4 {
+        font-size: 15px;
+        color: white;
+        font-weight: 500;
+        margin-inline: 5px 0;
+        margin-inline: 20px;
+    }
+}
+
+.blur {
+    width: 100%;
+    height: 40%;
+    background: #0f0e0e;
+    padding: 15px;
+
+
+    .following {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 20px;
+        padding-block: 10px 0;
+        position: relative;
+        /* Относительное позиционирование для корректного отображения z-index */
+        z-index: 1;
+
+        /* Помещаем контент поверх размытого фона */
+        .plays_icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #65D36E;
+            border: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 30%;
+            }
+        }
+
+        .followimg_button {
+            width: 130px;
+            height: 30px;
+            background-color: none;
+            border-radius: 20px;
+            border: 1px solid white;
+            color: white;
+            font-weight: 500;
+        }
+
+        h6 {
+            font-size: 30px;
+            margin-top: -16px;
+            color: rgb(182, 181, 181);
+
+            &:hover {
+                color: white;
+            }
+        }
+
+    }
+
+
+}
+
+.box_musics {
+    /* position: relative; */
+    /* Позиционируем относительно его дочерних элементов */
+    margin-top: -80px;
+    width: 100%;
+    /* height: 100vh; */
+    /* Например, высота равна высоте окна браузера */
+    background-color: #0f0e0e;
+    /* Цвет фона с прозрачностью */
+    overflow: hidden;
+    /* Обрезаем любое содержимое, которое может выходить за границы */
+    padding: 15px;
+    /* Отступы внутри контейнера */
+    /* margin-top: -130px; */
+
+    /* Добавляем размытие и фильтр на псевдоэлементе */
+
+    /* box-shadow: 0 0 10px 10px rgb(44, 42, 42); */
+    /* Стили для внутренних элементов */
+
+    h3 {
+        color: white;
+        font-size: 22px;
+        font-weight: 500;
+        margin-block: 15px 0;
+    }
+
+    .musics-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 25px 10px;
+
+        .item_musics_box {
+            width: calc(100% + 20px);
+            padding: 10px 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &:hover {
+                background-color: rgba(145, 141, 141, 0.247);
+                border-radius: 5px;
+            }
+
+            .left {
+                width: 40%;
+                display: flex;
+                gap: 15px;
+                justify-content: start;
+                align-items: center;
+
+
+                p {
+                    font-size: 15px;
+                    color: rgb(216, 213, 213);
+                    font-weight: 500;
+
+                }
+
+                img {
+                    width: 40px;
+                    border-radius: 5px;
+                }
+
+                a {
+                    margin-inline: 10px 0;
+                    font-size: 15px;
+                    color: white;
+                    font-weight: 500;
+                    text-decoration: none;
+                }
+            }
+
+            h4 {
+                font-size: 15px;
+                color: rgb(207, 203, 203);
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.see_All {
+    cursor: pointer;
+}
+
+
+@media (max-width:460px) {
+    body {
+        .wrap {
+            .container {
+                .cont{
+                    .image_box{
+                        .confirmed{
+                            span{
+                                font-size: 12px;
+                            }
+                        }
+                        h2{
+                            font-size: 45px;
+                        }
+                        h4{
+                            font-size: 12px;
+                        }
+                    }
+                    .following{
+                        .following:nth-child(2){
+                            width: 110px;
+                            font-size: 14px;
+                        }
+                        h6{
+                            display: none;
+                        }
+                    }
+                }
+                .box_musics {
+                    h3 {
+                        font-size: 14px;
+                    }
+
+                    .musics-container {
+                        .item_musics_box {
+                            .left {
+                                width: 100%;
+
+                                p {
+                                    display: none;
+                                }
+
+                            }
+
+                            .right {
+                                h4 {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
