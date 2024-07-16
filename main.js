@@ -9,7 +9,7 @@ import {
   player_musics,
   reloadNewRel2
 
-} from "../spotify2/modules/ui.js";
+} from "/modules/ui.js"
 let music_box = document.querySelector('.music_box')
 let album_box_container = document.querySelector('.album_box_container')
 let artists_box_container = document.querySelector('.artists_box_container')
