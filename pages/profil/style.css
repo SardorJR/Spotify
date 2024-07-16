@@ -84,7 +84,7 @@
     body {
         .container {
             .profil_box {
-                height: 35%;
+                height: 60%;
                 display: flex;
                 flex-direction: column;
                 align-items: start;
